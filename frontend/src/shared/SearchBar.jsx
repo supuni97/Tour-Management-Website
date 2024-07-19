@@ -1,5 +1,5 @@
 import React from 'react';
-import './searchBar.css';
+import './searchbar.css';
 import  {Col , Form, FormGroup} from 'reactstrap';
 
 const SearchBar = () => {

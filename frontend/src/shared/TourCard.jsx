@@ -16,7 +16,7 @@ const {totalRating,avgRating} = calculateAvgRating(reviews)
         </div>
         </Card>
 
-        <CardBody>
+        <CardBody className='card__body'>
             <div className='card_top d-flex align-items-center justify-content-between'>
             <span className='tour_location d-flex align-items-center gap-1'>
             <i class="ri-map-pin-line">{city}</i>

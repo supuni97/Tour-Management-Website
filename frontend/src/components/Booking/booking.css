@@ -72,3 +72,13 @@
     color: var(--text-color);
     font-weight: 500;
 }
+
+.booking_btm{
+    margin-top: 1rem;
+}
+
+.total h5, .total span{
+    color: var(--heading-color) !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+}

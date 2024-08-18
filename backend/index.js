@@ -2,16 +2,15 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
-// @ts-ignore
 import cookieParser from 'cookie-parser';
-
+import tourRoute from './routes/tours.js';
 
 dotenv.config()
-const app = express()
-const port = process.env.PORT || 8000
+const app = express();
+const port = process.env.PORT || 8000;
 
 //db connection
-mongoose.set("strictQuery",false);
+mongoose.set('strictQuery',false);
 
 const connect = async () => {
     try {
@@ -19,18 +18,19 @@ const connect = async () => {
             useNewUrlParser:true,
             useUnifiedTopology:true
         })
-        console.log('MongoDB database connected')
+        console.log('MongoDB database connected');
         
     } catch (err) {
-        console.log('MongoDB database Connection failed')
+        console.log('MongoDB database Connection failed');
     }
 }
 
 
 //middleware
-app.use(express.json())
-app.use(cors())
-app.use(cookieParser())
+app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
+app.use('/tours', tourRoute);
 
 app.listen(port, ()=>{
     connect();

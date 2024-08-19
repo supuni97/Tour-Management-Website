@@ -23,6 +23,8 @@
     "mongoose": "^8.5.3"
   },
   "devDependencies": {
-    "@types/cookie-parser": "^1.4.7"
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/jsonwebtoken": "^9.0.6"
   }
 }

@@ -44,7 +44,7 @@ export const login = async(req,res)=>{
       }
 
       //if user exists
-      const checkCorrectPW = bcrypt.compare(req.body.password, user.password )
+      const checkCorrectPW = await bcrypt.compare(req.body.password, user.password )
         
       //if pw is incorrect
       if(!checkCorrectPW){
@@ -59,7 +59,13 @@ export const login = async(req,res)=>{
       res.cookie('accessToken',token,{
         httpOnly:true,
         expires:token.expiresIn
-      }).status(200).json({success:true,message:"Successfully login", data:{...rest}})
+      })
+      .status(200)
+      .json({
+        token,
+    data:{...rest},
+    role,
+});
 
     } catch (err) {
         res.status(500).json({success:false,message:"Failed to login"})

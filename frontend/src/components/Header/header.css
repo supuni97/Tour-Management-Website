@@ -46,3 +46,41 @@
     z-index: 999;
 
 }
+
+@media only screen and (max-width:992px) {
+    .logo img{
+        width: 20%;
+    }
+
+    .navigation{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.411);
+        z-index: 999;
+        display: none;
+    }
+
+    .menu{
+        position: absolute;
+        padding: 40px;
+        top:0;
+        right: 0;
+        width: calc(100%-75%);
+        height: 100%;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 0.5rem;
+    }
+
+    .show__menu{
+        display: block;
+    }
+    
+    .mobile__menu{
+        display: block;
+    }
+}

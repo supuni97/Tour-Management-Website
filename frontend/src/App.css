@@ -99,3 +99,9 @@ padding: 0.2rem 1.1rem  !important;
     padding: 40px 0;
   }
 }
+
+@media only screen and (max-width:768px){
+  .section__subtitle{
+    font-size: 1.3rem;
+  }
+}
